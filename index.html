@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Anime Viewer</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content" id="content"></div>
+        <img id="loading" src="assets/gif/loading.gif" alt="Loading...">
+        <div class="nav-buttons" id="nav-buttons">
+            <button id="left" class="nav-button"><i class='bx bxs-left-arrow'></i> Previous</button>
+            <button id="random" class="nav-button">Random </button>
+            <button id="right" class="nav-button">Next <i class='bx bxs-right-arrow' ></i></button>
+        </div>
+        <div class="id-input">
+            <input type="number" id="inputId" placeholder="Enter Anime ID" min="1">
+            <button id="goButton" class="nav-button">Go</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+    <script id="character" type="text/x-handlebars-template">
+        <div class="character-card">
+            <h2>{{name}}</h2>
+            <img src="{{image}}" alt="{{name}}">
+            <p><strong>ID:</strong> {{id}}</p>
+            <p><strong>Status:</strong> {{status}}</p>
+            <p><strong>Species:</strong> {{species}}</p>
+            <p><strong>Gender:</strong> {{gender}}</p>
+            <p><strong>Origin:</strong> {{origin}}</p>
+            <p><strong>Location:</strong> {{location}}</p>
+        </div>
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
